@@ -15,6 +15,16 @@
     "koishi",
     "plugin"
   ],
+  "koishi": {
+    "description": {
+      "zh": "不能好好说话! 移植自 'RimoChan/bnhhsh'"
+    }
+  },
+  "homepage": "https://https://github.com/dasoops/koishi-plugin-bnhhsh",
+  "repository": {
+    "type": "git",
+    "url": "git+https://https://github.com/dasoops/koishi-plugin-bnhhsh.git"
+  },
   "peerDependencies": {
     "koishi": "^4.17.11"
   },
