@@ -11,7 +11,7 @@ export function apply(ctx: Context, config: Config) {
   ctx.command('这是什么 <message>')
     .action((argv, message) => {
       const result = bnhhsh(message);
-      ctx.logger("bnhhsh").info(`${message} -> ${result}`)
+      ctx.logger("bnhhsh").debug(`${message} -> ${result}`)
       return(<>
         <quote id={argv.session.messageId}/>
         {result}
