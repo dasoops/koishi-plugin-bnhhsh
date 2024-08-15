@@ -1,5 +1,5 @@
 {
-  "name": "koishi-plugin-bnhhsh",
+  "name": "@dasoops/koishi-plugin-bnhhsh",
   "description": "不能好好说话!",
   "version": "0.0.1",
   "main": "lib/index.js",
@@ -15,8 +15,11 @@
     "koishi",
     "plugin"
   ],
-  "devDependencies": {},
   "peerDependencies": {
     "koishi": "^4.17.11"
+  },
+  "dependencies": {
+    "@types/pinyin": "^2.10.2",
+    "pinyin": "^4.0.0-alpha.2"
   }
 }
