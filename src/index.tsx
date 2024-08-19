@@ -15,7 +15,8 @@ export function apply(ctx: Context, config: Config): void {
         imports: config.imports,
     });
 
-    ctx.command("这是什么 <message>")
+    ctx.command("bnhhsh <message>")
+        .alias("这是什么")
         .action((argv, message) => {
             const result = bnhhsh(wordBucket, message);
             logger.debug(`${message} -> ${result}`);
