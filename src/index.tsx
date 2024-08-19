@@ -1,5 +1,4 @@
 import { Context, Schema } from "koishi";
-import bnhhsh from "./bnhhsh";
 import { baseDirDefault, Config as ConfigImport, name as nameImport } from "./config";
 import { WordBucket } from "./wordBucket";
 
@@ -18,7 +17,7 @@ export function apply(ctx: Context, config: Config): void {
     ctx.command("bnhhsh <message>")
         .alias("这是什么")
         .action((argv, message) => {
-            const result = bnhhsh(wordBucket, message);
+            const result = wordBucket.bnhhsh(message);
             logger.debug(`${message} -> ${result}`);
             return (<>
                 <quote id={argv.session.messageId}/>
