@@ -1,21 +1,27 @@
-import { Context, Schema } from 'koishi'
+import { Context, Schema } from "koishi";
 import bnhhsh from "./bnhhsh";
+import { baseDirDefault, Config as ConfigImport, name as nameImport } from "./config";
+import { WordBucket } from "./wordBucket";
 
-export const name = 'bnhhsh'
+export const name = nameImport;
+export type Config = ConfigImport;
+export const Config: Schema<Config> = ConfigImport;
 
-export interface Config {}
+export function apply(ctx: Context, config: Config): void {
+    const logger = ctx.logger("bnhhsh");
+    const wordBucket = new WordBucket({
+        logger: logger,
+        baseDir: baseDirDefault,
+        imports: config.imports,
+    });
 
-export const Config: Schema<Config> = Schema.object({})
-
-export function apply(ctx: Context, config: Config) {
-  ctx.command('这是什么 <message>')
-    .action((argv, message) => {
-      const result = bnhhsh(message);
-      ctx.logger("bnhhsh").debug(`${message} -> ${result}`)
-      return(<>
-        <quote id={argv.session.messageId}/>
-        {result}
-      </>)
-      }
-    )
+    ctx.command("这是什么 <message>")
+        .action((argv, message) => {
+            const result = bnhhsh(wordBucket, message);
+            logger.debug(`${message} -> ${result}`);
+            return (<>
+                <quote id={argv.session.messageId}/>
+                {result}
+            </>);
+        });
 }

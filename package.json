@@ -13,24 +13,20 @@
   "keywords": [
     "chatbot",
     "koishi",
-    "plugin",
-    "bnhhsh"
+    "plugin"
   ],
-  "koishi": {
-    "description": {
-      "zh": "不能好好说话! 移植自 'RimoChan/bnhhsh'"
-    }
-  },
-  "homepage": "https://https://github.com/dasoops/koishi-plugin-bnhhsh",
-  "repository": {
-    "type": "git",
-    "url": "git+https://https://github.com/dasoops/koishi-plugin-bnhhsh.git"
-  },
   "peerDependencies": {
     "koishi": "^4.17.11"
   },
   "dependencies": {
-    "@types/pinyin": "^2.10.2",
+    "@koishijs/plugin-explorer": "^1.5.5",
+    "@satorijs/element": "^3.1.7",
     "pinyin": "^4.0.0-alpha.2"
+  },
+  "devDependencies": {
+    "@stylistic/eslint-plugin-js": "^2.6.4",
+    "@types/pinyin": "^2.10.2",
+    "eslint": "^9.9.0",
+    "typescript-eslint": "^8.1.0"
   }
 }
