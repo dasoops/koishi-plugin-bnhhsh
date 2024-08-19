@@ -1,7 +1,7 @@
 import { Schema } from "koishi";
 import path from "node:path";
 
-export const name = "bnhhsh";
+export const name = "@dasoops/bnhhsh";
 
 export type Import = {
     file: string,
