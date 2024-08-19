@@ -37,7 +37,7 @@ export const Config: Schema<Config> = Schema.object({
             enable: Schema.boolean()
                 .description("启用")
                 .default(true),
-            file: Schema.path({ filters: [".json", "file"] })
+            file: Schema.path({ filters: [{ name: "", extensions: [".json"] }] })
                 .description("词库")
                 .required(),
             pain: Schema.percent()
