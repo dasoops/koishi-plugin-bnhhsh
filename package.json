@@ -1,7 +1,7 @@
 {
   "name": "@dasoops/koishi-plugin-bnhhsh",
   "description": "不能好好说话!",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
@@ -13,8 +13,19 @@
   "keywords": [
     "chatbot",
     "koishi",
-    "plugin"
+    "plugin",
+    "bnhhsh"
   ],
+  "koishi": {
+    "description": {
+      "zh": "不能好好说话! 移植自 'RimoChan/bnhhsh'"
+    }
+  },
+  "homepage": "https://https://github.com/dasoops/koishi-plugin-bnhhsh",
+  "repository": {
+    "type": "git",
+    "url": "git+https://https://github.com/dasoops/koishi-plugin-bnhhsh.git"
+  },
   "peerDependencies": {
     "koishi": "^4.17.11"
   },
