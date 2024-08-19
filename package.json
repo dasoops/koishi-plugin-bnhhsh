@@ -1,7 +1,7 @@
 {
   "name": "@dasoops/koishi-plugin-bnhhsh",
   "description": "不能好好说话!",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
