@@ -25,7 +25,7 @@ export const builtIn = [
 
 const importDefault = builtIn.map(({ name, ...rest }) => {
     return {
-        file: path.resolve(baseDirDefault, `${name}.json`),
+        file: path.posix.join(baseDirDefault, `${name}.json`),
         enable: true,
         ...rest,
     };
